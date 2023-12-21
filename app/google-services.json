@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "869798565009",
+    "firebase_url": "https://product-category-639b6-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "product-category-639b6",
+    "storage_bucket": "product-category-639b6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:869798565009:android:927cc038d278c13f585b30",
+        "android_client_info": {
+          "package_name": "com.example.hussmancase"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4YFDXW3Dd2vJfsBrWyhvtJOuzGhT0LIM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
