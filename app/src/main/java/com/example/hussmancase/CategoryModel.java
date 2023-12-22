@@ -1,13 +1,12 @@
 package com.example.hussmancase;
 
-
     public class CategoryModel {
 
         String cat_name;
         int cat_image;
 
-        public CategoryModel(String cat, int image){
-            this.cat_name = cat;
+        public CategoryModel(String cat_name, int image){
+            this.cat_name = cat_name;
             this.cat_image = image;
         }
         public CategoryModel(){}

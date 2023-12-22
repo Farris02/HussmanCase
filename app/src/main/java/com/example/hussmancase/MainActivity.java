@@ -5,6 +5,7 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.ClipData;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 
@@ -24,10 +25,10 @@ public class MainActivity extends AppCompatActivity {
         category = findViewById(R.id.Categories);
         cat = new ArrayList<>();
 
-        cat.add(new CategoryModel("Frozen Foods", R.drawable.frozen_food));
+        cat.add(new CategoryModel("Frozen Food", R.drawable.frozen_food));
 
         adapter = new CategoryAdapter(this, cat);
-        category.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+        category.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
         category.setAdapter(adapter);
 
     }

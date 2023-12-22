@@ -7,6 +7,10 @@
     android:layout_margin="2dp"
     app:cardCornerRadius="11dp"
     >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <ImageView
         android:id="@+id/CatImage"
         android:layout_width="200dp"
@@ -24,7 +28,7 @@
         />
 
 
-
+    </RelativeLayout>
 
 
 </androidx.cardview.widget.CardView>

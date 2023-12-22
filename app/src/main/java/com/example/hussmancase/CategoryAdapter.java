@@ -19,16 +19,15 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyHold
     Intent intent;
     Context context;
 
-    public CategoryAdapter(Context context, ArrayList<CategoryModel> category){
+    public CategoryAdapter(Context context, ArrayList<CategoryModel> cat){
         this.context = context;
-        this.category = category;
+        this.category = cat;
     }
     @NonNull
     @Override
     public MyHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(context).inflate(R.layout.category_model, parent, false );
-        MyHolder holder = new MyHolder(view);
-        return holder;
+        return new MyHolder(view);
 
     }
 
@@ -44,14 +43,15 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyHold
             String catName = holder.cat.getText().toString();
 
             switch(catName){
-                case "Frozen Foods":
+                case "Frozen Food":
                     intent = new Intent(holder.itemView.getContext(), FrozenFood.class);
             }
-
+                holder.itemView.getContext().startActivity(intent);
             }
 
         });
-        holder.itemView.getContext().startActivity(intent);
+
+
     }
 
     @Override
@@ -62,7 +62,6 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyHold
 
     class MyHolder extends RecyclerView.ViewHolder {
         TextView cat;
-
         ImageView image;
         public MyHolder(@NonNull View itemView) {
             super(itemView);
