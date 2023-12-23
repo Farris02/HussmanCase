@@ -41,5 +41,8 @@ dependencies {
     implementation ("com.google.firebase:firebase-analytics:21.5.0")
     implementation ("androidx.recyclerview:recyclerview:1.3.2")
     implementation ("androidx.cardview:cardview:1.0.0")
+    implementation ("com.firebaseui:firebase-ui-database:8.0.0")
+    implementation ("com.google.firebase:firebase-database-ktx:20.1.0")
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
 
 }

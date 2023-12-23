@@ -3,10 +3,10 @@ package com.example.hussmancase;
 public class ProductModels {
 
     String Model_Name;
-    String Model_Image;
+    int Model_Image;
 
 
-    public ProductModels(String Model_Name, String Model_Image){
+    public ProductModels(String Model_Name, int Model_Image){
         this.Model_Name = Model_Name;
         this.Model_Image = Model_Image;
 
@@ -23,11 +23,11 @@ public class ProductModels {
         this.Model_Name = Model_Name;
     }
 
-    public String getModel_Image() {
+    public int getModel_Image() {
         return Model_Image;
     }
 
-    public void setModel_Image(String Model_Image) {
+    public void setModel_Image(int Model_Image) {
         this.Model_Image = Model_Image;
     }
 
