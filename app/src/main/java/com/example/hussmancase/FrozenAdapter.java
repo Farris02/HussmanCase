@@ -1,6 +1,7 @@
 package com.example.hussmancase;
 
 import android.content.Intent;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
@@ -38,7 +39,6 @@ View view;
     holder.prod.setText(model.getModel_Name());
     holder.image.setImageResource(model.getModel_Image());
     Glide.with(holder.image.getContext()).load(model.getModel_Image()).into(holder.image);
-    Log.d("RecyclerView", "Item Added: " + model.getModel_Name());
 
     holder.card.setOnClickListener(new View.OnClickListener() {
         @Override
@@ -56,13 +56,10 @@ View view;
     @NonNull
     @Override
     public FrozenHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return null;
+        view = LayoutInflater.from(parent.getContext()).inflate(R.layout.product_model, parent, false);
+        return new FrozenHolder(view);
     }
 
-    @Override
-    public int getItemCount() {
-        return 0;
-    }
 
     class FrozenHolder extends RecyclerView.ViewHolder {
         TextView prod;
@@ -70,9 +67,8 @@ View view;
         CardView card;
         public FrozenHolder(@NonNull View itemView) {
             super(itemView);
-
-            image = itemView.findViewById(R.id.product_image);
             prod = itemView.findViewById(R.id.product_text);
+            image = itemView.findViewById(R.id.product_image);
             card = itemView.findViewById(R.id.product_view);
         }
     }

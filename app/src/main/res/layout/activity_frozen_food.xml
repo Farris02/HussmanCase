@@ -5,32 +5,28 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FrozenFood">
-    
+
     <LinearLayout
         android:background="#d3d3d3"
-        android:id = "@+id/Header"
-        android:orientation="horizontal"
-        android:layout_height="90dp"
+        android:id="@+id/Header"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
         android:layout_width="match_parent">
 
-    <TextView
-        android:id = "@+id/Frozen_Food"
-        android:layout_width="match_parent"
-        android:layout_height="90dp"
-        android:text = "Frozen Food Refrigeration"
-        android:gravity="center"
-        android:textSize="30sp"
-        />
+        <TextView
+            android:id="@+id/Frozen_Food"
+            android:layout_width="match_parent"
+            android:layout_height="90dp"
+            android:text="Frozen Food Refrigeration"
+            android:gravity="center"
+            android:textSize="30sp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/frozen_recycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="8dp" />
 
     </LinearLayout>
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id = "@+id/frozen_recycler"
-        android:padding="8dp"
-        android:layout_below="@+id/Header"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-/>
-
 
 </RelativeLayout>
