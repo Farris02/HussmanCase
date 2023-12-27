@@ -16,41 +16,39 @@ import com.bumptech.glide.Glide;
 public class FrozenAdapter extends FirebaseRecyclerAdapter<ProductModels, FrozenAdapter.FrozenHolder> {
 
 
-    /**
-     * Initialize a {@link RecyclerView.Adapter} that listens to a Firebase query. See
-     * {@link FirebaseRecyclerOptions} for configuration options.
-     *
-     * @param options
-     */
-private int j;
 View view;
 
     public FrozenAdapter(@NonNull FirebaseRecyclerOptions<ProductModels> options) {
         super(options);
     }
-    public FrozenAdapter(@NonNull FirebaseRecyclerOptions<ProductModels> options, int i) {
-        super(options);
-        j = i;
-    }
+
 
 
     @Override
     protected void onBindViewHolder(@NonNull FrozenHolder holder, int position, @NonNull ProductModels model) {
-    holder.prod.setText(model.getModel_Name());
-    holder.image.setImageResource(model.getModel_Image());
-    Glide.with(holder.image.getContext()).load(model.getModel_Image()).into(holder.image);
+    holder.prod.setText(model.getName());
+    Glide.with(holder.image.getContext()).load(model.getImage()).into(holder.image);
 
     holder.card.setOnClickListener(new View.OnClickListener() {
         @Override
         public void onClick(View view) {
-        Intent intent = new Intent(holder.itemView.getContext(), Specifications.class);
-               intent.putExtra("Item_Name", model.getModel_Name());
-               intent.putExtra("Item_Image", model.getModel_Image());
+        Intent intent;
+
+ if(model.getName().equals("Wide Island Freezer – GHN74")) {
+
+  intent = new Intent(holder.itemView.getContext(), Specification_GHN.class);
+
+ }
+else{
+
+     intent = new Intent(holder.itemView.getContext(), Specifications.class);
+ }
+            intent.putExtra("Name", model.getName());
+            intent.putExtra("Image", model.getImage());
+
+            holder.itemView.getContext().startActivity(intent);
         }
     });
-
-
-
     }
 
     @NonNull
@@ -61,7 +59,8 @@ View view;
     }
 
 
-    class FrozenHolder extends RecyclerView.ViewHolder {
+    class FrozenHolder extends RecyclerView.ViewHolder
+    {
         TextView prod;
         ImageView image;
         CardView card;

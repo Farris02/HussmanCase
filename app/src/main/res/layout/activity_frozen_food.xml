@@ -21,12 +21,14 @@
             android:gravity="center"
             android:textSize="30sp" />
 
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/frozen_recycler"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:padding="8dp" />
 
     </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/frozen_recycler"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/Header"
+        android:padding="8dp" />
 
 </RelativeLayout>

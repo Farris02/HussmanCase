@@ -24,7 +24,7 @@ public class FrozenFood extends AppCompatActivity {
         setContentView(R.layout.activity_frozen_food);
 
         recyv = findViewById(R.id.frozen_recycler);
-        recyv.setLayoutManager(new GridLayoutManager(this, 2));
+        recyv.setLayoutManager(new WrapContentLinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));
 
         Query query = FirebaseDatabase.getInstance()
         .getReference()
@@ -35,7 +35,7 @@ public class FrozenFood extends AppCompatActivity {
                 .setQuery(query, ProductModels.class)
                 .build();
 
-        adap = new FrozenAdapter(options, 1);
+        adap = new FrozenAdapter(options);
         recyv.setAdapter(adap);
     }
 

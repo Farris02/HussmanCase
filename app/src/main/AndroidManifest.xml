@@ -15,6 +15,9 @@
         android:theme="@style/Theme.HussmanCase"
         tools:targetApi="31">
         <activity
+            android:name=".Specification_GHN"
+            android:exported="false" />
+        <activity
             android:name=".Specifications"
             android:exported="false" />
         <activity

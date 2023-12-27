@@ -2,34 +2,31 @@ package com.example.hussmancase;
 
 public class ProductModels {
 
-    String Model_Name;
-    int Model_Image;
+    String name;
+    String image;
 
 
-    public ProductModels(String Model_Name, int Model_Image){
-        this.Model_Name = Model_Name;
-        this.Model_Image = Model_Image;
-
+    public ProductModels(String name, String image) {
+        this.name = name;
+        this.image = image;
     }
 
-    public ProductModels() {
+    public ProductModels(){}
+
+    public  String getName() {
+        return name;
     }
 
-    public String getModel_Name() {
-        return Model_Name;
+    public void setName(String name) {
+        this.name = name;
     }
 
-    public void setModel_Name(String Model_Name) {
-        this.Model_Name = Model_Name;
+    public  String getImage() {
+        return image;
     }
 
-    public int getModel_Image() {
-        return Model_Image;
+    public void setImage(String image) {
+        this.image = image;
     }
-
-    public void setModel_Image(int Model_Image) {
-        this.Model_Image = Model_Image;
-    }
-
 
 }
