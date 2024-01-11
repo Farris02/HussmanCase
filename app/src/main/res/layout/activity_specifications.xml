@@ -53,7 +53,7 @@
 
       <TextView
         android:id="@+id/first_0"
-        android:layout_width="15dp"
+        android:layout_width="20dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/specifications_text"
         android:text="0"
@@ -65,9 +65,9 @@
         android:layout_width="20dp"
         android:layout_height="19dp"
         android:layout_below="@id/specifications_text"
-        android:layout_marginStart="125dp"
-        android:src="@drawable/minus"
-        />
+        android:layout_marginStart="130dp"
+        android:layout_marginTop="-1dp"
+        android:src="@drawable/minus" />
 
     <TextView
         android:id="@+id/second_title"
@@ -88,7 +88,7 @@
 
     <TextView
         android:id="@+id/second_0"
-        android:layout_width="15dp"
+        android:layout_width="20dp"
         android:layout_height="wrap_content"
         android:layout_below = "@id/first_title"
         android:text="0"
@@ -100,7 +100,7 @@
         android:layout_width="20dp"
         android:layout_height="19dp"
         android:layout_below = "@id/first_title"
-        android:layout_marginStart="125dp"
+        android:layout_marginStart="130dp"
         android:src="@drawable/minus"
         />
 
@@ -123,7 +123,7 @@
 
     <TextView
         android:id="@+id/third_0"
-        android:layout_width="15dp"
+        android:layout_width="20dp"
         android:layout_height="wrap_content"
         android:layout_below = "@id/second_title"
         android:text="0"
@@ -135,7 +135,7 @@
         android:layout_width="20dp"
         android:layout_height="19dp"
         android:layout_below = "@id/second_title"
-        android:layout_marginStart="125dp"
+        android:layout_marginStart="130dp"
         android:src="@drawable/minus"
         />
 
@@ -160,7 +160,7 @@
 
     <TextView
         android:id="@+id/fourth_0"
-        android:layout_width="15dp"
+        android:layout_width="20dp"
         android:layout_height="wrap_content"
         android:layout_below = "@id/third_title"
         android:text="0"
@@ -172,7 +172,7 @@
         android:layout_width="20dp"
         android:layout_height="19dp"
         android:layout_below = "@id/third_title"
-        android:layout_marginStart="125dp"
+        android:layout_marginStart="130dp"
         android:src="@drawable/minus"
         />
 
@@ -195,23 +195,23 @@
         android:text="Left Hand"
         android:layout_marginStart="205dp"
         android:textAlignment="center"/>
+
     <ImageView
         android:id="@+id/LH_plus"
         android:layout_width="20dp"
         android:layout_height="19dp"
         android:layout_below="@id/ends_title"
         android:layout_marginStart="295dp"
-        android:src="@drawable/plus"
-        />
+        android:src="@drawable/plus" />
 
     <TextView
         android:id="@+id/LH_0"
         android:layout_width="15dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/specifications_text"
-        android:text="0"
         android:layout_marginStart="315dp"
-        android:textAlignment="center"/>
+        android:text="0"
+        android:textAlignment="center" />
 
     <ImageView
         android:id="@+id/LH_minus"
