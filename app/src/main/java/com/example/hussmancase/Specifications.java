@@ -30,8 +30,10 @@ private ImageView plus1, plus2, plus3, plus4, minus1, minus2, minus3, minus4, LH
 private TextView first_0, second_0, third_0, fourth_0, LH_0, RH_0, Common_0;
 int quantity = 0, quantity2 = 0, quantity3 = 0, quantity4 = 0, quantity5 = 0, quantity6 = 0, quantity7 = 0;
 
+int price_1, price_2, price_3, price_4, price_5, price_6, price_7, total_price;
 int two_door_price = 4000, three_door_price = 5000, four_door_price = 6000, LH_price = 500, RH_price = 500, Common_price = 1000;
-    private void getSpecs() {
+
+private void getSpecs() {
 
         Intent intent = getIntent();
         if (intent != null) {
@@ -45,15 +47,19 @@ int two_door_price = 4000, three_door_price = 5000, four_door_price = 6000, LH_p
                 @Override
                 public void onClick(View view) {
                     if (quantity > 0) {
+
                         quantity--;
                         first_0.setText(Integer.toString(quantity));
+                        price_1 = quantity * two_door_price;
+                        System.out.print(Integer.toString(price_1));
+
+
                     }
-
-
                 }
-
-
             });
+
+
+
             plus1.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -61,24 +67,26 @@ int two_door_price = 4000, three_door_price = 5000, four_door_price = 6000, LH_p
 
                     } else {
                         quantity++;
-                        first_0.setText(Integer.toString(quantity));
-                    }
-
+                        first_0.setText(Integer.toString(quantity));                        }
 
                 }
             });
-            minus2.setOnClickListener(new View.OnClickListener() {
-                @Override
+
+
+            minus2.setOnClickListener(new View.OnClickListener() {@Override
                 public void onClick(View view) {
                     if (quantity2 > 0) {
                         quantity2--;
                         second_0.setText(Integer.toString(quantity2));
+                        price_2 = quantity2 * three_door_price;
+                        System.out.print(Integer.toString(price_2));
                     }
 
 
                 }
 
             });
+
             plus2.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -93,12 +101,15 @@ int two_door_price = 4000, three_door_price = 5000, four_door_price = 6000, LH_p
                 }
 
             });
+
             minus3.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (quantity3 > 0) {
                         quantity3--;
                         third_0.setText(Integer.toString(quantity3));
+                        price_3 = quantity3 * three_door_price;
+                        System.out.print(Integer.toString(price_3));
                     }
                 }
             });
@@ -110,6 +121,7 @@ int two_door_price = 4000, three_door_price = 5000, four_door_price = 6000, LH_p
                     } else {
                         quantity3++;
                         third_0.setText(Integer.toString(quantity3));
+
                     }
                 }
             });
@@ -119,6 +131,9 @@ int two_door_price = 4000, three_door_price = 5000, four_door_price = 6000, LH_p
                     if (quantity4 > 0) {
                         quantity4--;
                         fourth_0.setText(Integer.toString(quantity4));
+                        price_4 = quantity4 * four_door_price;
+                        System.out.print(Integer.toString(price_4));
+
                     }
                 }
             });
@@ -139,6 +154,9 @@ int two_door_price = 4000, three_door_price = 5000, four_door_price = 6000, LH_p
                     if (quantity5 > 0) {
                         quantity5--;
                         LH_0.setText(Integer.toString(quantity5));
+                        price_5 = quantity5 * LH_price;
+                        System.out.print(Integer.toString(price_5));
+
                     }
                 }
             });
@@ -159,9 +177,12 @@ int two_door_price = 4000, three_door_price = 5000, four_door_price = 6000, LH_p
                     if (quantity6 > 0) {
                         quantity6--;
                         RH_0.setText(Integer.toString(quantity6));
+                        price_6 = quantity6 * RH_price;
+                        System.out.print(Integer.toString(price_6));
                     }
                 }
             });
+
             RH_plus.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
@@ -179,6 +200,8 @@ int two_door_price = 4000, three_door_price = 5000, four_door_price = 6000, LH_p
                     if (quantity7 > 0) {
                         quantity7--;
                         Common_0.setText(Integer.toString(quantity7));
+                        price_7 = quantity7 * Common_price;
+                        System.out.print(Integer.toString(price_7));
                     }
                 }
             });
@@ -195,7 +218,6 @@ int two_door_price = 4000, three_door_price = 5000, four_door_price = 6000, LH_p
             });
 
         }
-
 
     }
 private void initViews() {
@@ -222,11 +244,6 @@ private void initViews() {
         LH_0 = findViewById(R.id.LH_0);
         RH_0 = findViewById(R.id.RH_0);
         Common_0 = findViewById(R.id.Common_0);
-
-
-
-
-
 
     }
 
