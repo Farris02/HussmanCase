@@ -26,6 +26,9 @@ public class MainActivity extends AppCompatActivity {
         cat = new ArrayList<>();
 
         cat.add(new CategoryModel("Frozen Food", R.drawable.frozen_food));
+        cat.add(new CategoryModel("Chilled Food", R.drawable.chilled_foods));
+        cat.add(new CategoryModel("Integral Cases", R.drawable.chilled_foods));
+        cat.add(new CategoryModel("TCO2 Condensing Units", R.drawable.tco_condensing_unit));
 
         adapter = new CategoryAdapter(this, cat);
         category.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));

@@ -15,6 +15,15 @@
         android:theme="@style/Theme.HussmanCase"
         tools:targetApi="31">
         <activity
+            android:name=".TCO2_Condensing_Units"
+            android:exported="false" />
+        <activity
+            android:name=".IntegralCases"
+            android:exported="false" />
+        <activity
+            android:name=".ChilledFood"
+            android:exported="false" />
+        <activity
             android:name=".Specification_GHN"
             android:exported="false" />
         <activity

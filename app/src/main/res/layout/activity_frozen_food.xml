@@ -17,7 +17,7 @@
             android:id="@+id/Frozen_Food"
             android:layout_width="match_parent"
             android:layout_height="90dp"
-            android:text="Frozen Food Refrigeration"
+            android:text="Frozen Food Cases"
             android:gravity="center"
             android:textSize="30sp" />
 
