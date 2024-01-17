@@ -45,12 +45,19 @@ public class CategoryAdapter extends RecyclerView.Adapter<CategoryAdapter.MyHold
             switch(catName){
                 case "Frozen Food":
                     intent = new Intent(holder.itemView.getContext(), FrozenFood.class);
+                    break;
+
                 case "Chilled Food":
                     intent = new Intent(holder.itemView.getContext(), ChilledFood.class);
+                    break;
+
                 case "Integral Cases":
                     intent = new Intent(holder.itemView.getContext(), IntegralCases.class);
+                    break;
+
                 case "TCO2 Condensing Units":
                     intent = new Intent(holder.itemView.getContext(), TCO2_Condensing_Units.class);
+                    break;
             }
                 holder.itemView.getContext().startActivity(intent);
             }
