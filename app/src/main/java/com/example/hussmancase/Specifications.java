@@ -21,7 +21,7 @@ public class Specifications extends AppCompatActivity {
    getSpecs();
 
     }
-private ImageView spec_image;
+private ImageView spec_image, checkout;
 String name, image;
 
 private ImageView plus1, plus2, plus3, plus4, minus1, minus2, minus3, minus4, LH_plus,
@@ -31,7 +31,7 @@ private TextView first_0, second_0, third_0, fourth_0, LH_0, RH_0, Common_0;
 int quantity = 0, quantity2 = 0, quantity3 = 0, quantity4 = 0, quantity5 = 0, quantity6 = 0, quantity7 = 0;
 
 int price_1, price_2, price_3, price_4, price_5, price_6, price_7, total_price;
-int two_door_price = 4000, three_door_price = 5000, four_door_price = 6000, LH_price = 500, RH_price = 500, Common_price = 1000;
+int two_door_price = 4000, three_door_price = 5000, four_door_price = 6000, five_door_price = 7000, LH_price = 500, RH_price = 500, Common_price = 1000;
 
 private void getSpecs() {
 
@@ -108,7 +108,7 @@ private void getSpecs() {
                     if (quantity3 > 0) {
                         quantity3--;
                         third_0.setText(Integer.toString(quantity3));
-                        price_3 = quantity3 * three_door_price;
+                        price_3 = quantity3 * four_door_price;
                         System.out.print(Integer.toString(price_3));
                     }
                 }
@@ -131,7 +131,7 @@ private void getSpecs() {
                     if (quantity4 > 0) {
                         quantity4--;
                         fourth_0.setText(Integer.toString(quantity4));
-                        price_4 = quantity4 * four_door_price;
+                        price_4 = quantity4 * five_door_price;
                         System.out.print(Integer.toString(price_4));
 
                     }
@@ -219,9 +219,17 @@ private void getSpecs() {
 
         }
 
-    }
-private void initViews() {
+        checkout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });
+    }
+
+
+private void initViews() {
+        checkout = findViewById(R.id.checkout);
         spec_image = findViewById(R.id.specifications_image);
         plus1 = findViewById(R.id.plus1);
         plus2 = findViewById(R.id.plus2);
